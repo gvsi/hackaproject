@@ -1,0 +1,15 @@
+{
+  "name": "hackaproject12-webhook",
+  "version": "1.0.0",
+  "description": "Messenger Bot webhook built for Facebook Hack-a-project 2019 by Team 12",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
