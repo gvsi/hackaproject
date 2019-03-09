@@ -50,7 +50,7 @@ if (availableList[availableList.length-1]> endtime){
 // var ind = 0;
 if (availableList.length > 0) {
   for (var i= 0; i<availableList.length;i+=1){
-  console.log("First gap starts at: " + availableList[i]); 
+  console.log("Both of you available at: " + availableList[i]); 
   }
   
 } else {
@@ -61,8 +61,6 @@ return availableList;
 
 }
 
-/*
-//test
 var events = [{
   start: "2016-01-01T12:10",
   end: "2016-01-01T13:00"
@@ -84,4 +82,3 @@ var events = [{
 }];
 
 findCommonTime(events);
-*/
