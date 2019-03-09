@@ -1,16 +1,23 @@
 {
-  "name": "hackaproject12-webhook",
+  "name": "messenger-quick-start",
   "version": "1.0.0",
-  "description": "Messenger Bot webhook built for Facebook Hack-a-project 2019 by Team 12",
-  "main": "index.js",
+  "description": "An example webhook for Facebook Messenger quick start tutorial.",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
+  },
+  "author": "Facebook",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": "~4.7.0"
   }
 }
