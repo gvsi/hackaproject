@@ -4,6 +4,7 @@
   "description": "Messenger Bot webhook built for Facebook Hack-a-project 2019 by Team 12",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
