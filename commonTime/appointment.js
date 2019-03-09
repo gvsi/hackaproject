@@ -57,10 +57,54 @@ if (availableList.length > 0) {
   console.log("No gaps available");
 }
 
-return availableList;
+return availableList[0];
 
 }
 
+function addCalendar(commontime){
+const fs = require('fs');
+var stime = commontime;
+var mon = stime.getMonth()+1;
+if (mon<10){
+  mon = "0"+mon;
+}
+var date = stime.getDate();
+if (date<10){
+  date = "0"+date;
+}
+var hour = stime.getHours();
+if (hour<10){
+  hour = "0"+hour;
+}
+var min = stime.getMinutes();
+if (min<10){
+  min = "0"+min;
+}
+var scd = stime.getSeconds();
+if (scd<10){
+  scd = "0"+scd;
+}
+var starttime = ""+stime.getFullYear()+mon+date+"T"+hour+min+scd+"Z";
+hour = stime.getHours()+3;
+if (hour<10){
+  hour = "0"+hour;
+}
+
+var endtime = ""+stime.getFullYear()+mon+date+"T"+hour+min+scd+"Z";
+let content = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:"+starttime+"\nDTEND:"+endtime+"\nSUMMARY:Meet with a gay\nEND:VEVENT\nEND:VCALENDAR";
+fs.writeFile('newEvent.ics', content, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!");
+}); 
+
+}
+
+
+
+/*
 var events = [{
   start: "2016-01-01T12:10",
   end: "2016-01-01T13:00"
@@ -81,4 +125,7 @@ var events = [{
   end: "2016-01-01T20:45"
 }];
 
-findCommonTime(events);
+var commontime = findCommonTime(events);
+
+addCalendar(commontime);
+*/
